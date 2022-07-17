@@ -9,8 +9,8 @@ import helmet from "helmet";
 
 import "reflect-metadata";
 
-import { extractNumberFromEnv } from "./utils/env";
-import { AppDataSource } from "./db";
+import { extractNumberFromEnv } from "utils/env";
+import { AppDataSource } from "db";
 
 const initDB = async (): Promise<void> => {
   console.log("initializing database");

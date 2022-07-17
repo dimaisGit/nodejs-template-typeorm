@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 import { Photo } from "./entity";
-import { extractStringFromEnv } from "../utils/env";
+import { extractStringFromEnv } from "utils/env";
 
 const DB_USERNAME = extractStringFromEnv("DB_USERNAME");
 const DB_PASSWORD = extractStringFromEnv("DB_PASSWORD");

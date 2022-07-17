@@ -9,7 +9,12 @@
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "baseUrl": "./src",
+    "paths": {
+      "db/*": ["./db/*"],
+      "utils/*": ["./utils/*"]
+    }
   },
   "exclude": ["./node_modules"]
 }
