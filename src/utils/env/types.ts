@@ -1,3 +1,5 @@
 export type ExtractValueFromEnvFunction<ReturnType> = (
-  variableName: string
+  variableName: EnvVariableName
 ) => ReturnType | never;
+
+export type EnvVariableName = "PORT";
