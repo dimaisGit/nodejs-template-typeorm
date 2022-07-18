@@ -1,6 +1,7 @@
 import { DataSource } from "typeorm";
-import { Photo } from "./entity";
+import { Author, Photo, PhotoMetadata } from "./entity";
 import { extractStringFromEnv } from "utils/env";
+import { Album } from "./entity/Album";
 
 const DB_USERNAME = extractStringFromEnv("DB_USERNAME");
 const DB_PASSWORD = extractStringFromEnv("DB_PASSWORD");
@@ -12,7 +13,7 @@ export const AppDataSource = new DataSource({
   username: DB_USERNAME,
   password: DB_PASSWORD,
   database: "postgres",
-  entities: [Photo],
+  entities: [Photo, PhotoMetadata, Author, Album],
   synchronize: true,
   logging: false,
 });

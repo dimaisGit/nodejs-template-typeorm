@@ -11,6 +11,7 @@ import "reflect-metadata";
 
 import { extractNumberFromEnv } from "utils/env";
 import { AppDataSource } from "db";
+import { Album, Photo, PhotoMetadata } from "db/entity";
 
 const initDB = async (): Promise<void> => {
   console.log("initializing database");
@@ -41,6 +42,9 @@ const initServer = (): void => {
 const start = async (): Promise<void> => {
   await initDB();
   initServer();
+  await test();
 };
 
 start();
+
+const test = async (): Promise<void> => {};
