@@ -13,7 +13,7 @@ export class Album {
   id: number;
 
   @Column()
-  name: string;
+  title: string;
 
   @ManyToMany(() => Photo, (photo) => photo.albums)
   @JoinTable()

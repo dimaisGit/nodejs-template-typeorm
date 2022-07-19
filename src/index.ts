@@ -3,7 +3,6 @@ import express, { Express } from "express";
 import cors from "cors";
 
 import dotenv from "dotenv";
-dotenv.config();
 
 import helmet from "helmet";
 
@@ -12,6 +11,8 @@ import "reflect-metadata";
 import { extractNumberFromEnv } from "utils/env";
 import { AppDataSource } from "db";
 import { Album, Photo, PhotoMetadata } from "db/entity";
+
+dotenv.config();
 
 const initDB = async (): Promise<void> => {
   console.log("initializing database");
