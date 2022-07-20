@@ -2,4 +2,8 @@ export type ExtractValueFromEnvFunction<ReturnType> = (
   variableName: EnvVariableName
 ) => ReturnType | never;
 
-export type EnvVariableName = "PORT" | "DB_USERNAME" | "DB_PASSWORD";
+export type EnvVariableName =
+  | "PORT"
+  | "DB_USERNAME"
+  | "DB_PASSWORD"
+  | "JWT_PRIVATE_KEY";
