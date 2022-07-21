@@ -1,7 +1,6 @@
 import { DataSource } from "typeorm";
-import { Author, AuthToken, Photo, PhotoMetadata, User } from "./entity";
+import { AuthToken, User } from "./entity";
 import { extractStringFromEnv } from "utils/env";
-import { Album } from "./entity/Album";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -17,7 +16,7 @@ export const AppDataSource = new DataSource({
   password: DB_PASSWORD,
   database: "postgres",
   migrations: ["src/db/migration/**/*.ts"],
-  entities: [Photo, PhotoMetadata, Author, Album, User, AuthToken],
+  entities: [User, AuthToken],
   synchronize: false,
   logging: "all",
 });
